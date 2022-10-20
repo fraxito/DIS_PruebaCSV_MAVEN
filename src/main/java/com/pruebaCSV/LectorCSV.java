@@ -2,7 +2,6 @@ package com.pruebaCSV;
 
 import com.opencsv.CSVReader;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 
 /*
