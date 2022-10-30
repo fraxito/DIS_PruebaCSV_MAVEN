@@ -16,16 +16,16 @@ public class PruebaCSV {
        //LectorCSV miLector = new LectorCSV();
        //miLector.leeCSV("./src/main/resources/datos/pokemon.csv");
        ListaPokemon miLista = new ListaPokemon("./src/main/resources/datos/pokemon.csv");
-
+        int seleccion = -1;
         Scanner sc = new Scanner(System.in);
-        System.out.println("¿que quieres hacer con los pokémon?");
-        while (sc.hasNext()) {
-            int select = 0;
+        while (seleccion != 0) {
+            System.out.println("¿que quieres hacer con los pokémon? \n 0-Salir \n 1-Buscar por tipo \n 2-Buscar por nombre ");
+            System.out.println(" 3-Buscar por salud \n 4-Busca por nombre Full info \n 5-Listar todos los pokemon");
             if (sc.hasNextInt()) {
-                select = sc.nextInt();
+                seleccion = sc.nextInt();
             }
-            switch (select) {
-                case 1:;break;
+            switch (seleccion) {
+                case 1:miLista.listaPorTipo();break;
                 case 2:;break;
                 case 3:;break;
                 case 4:;break;
@@ -33,6 +33,7 @@ public class PruebaCSV {
                 default:
             }
         }
+        System.out.println("Adios!");
 
     }
 

@@ -4,6 +4,7 @@ import com.opencsv.CSVReader;
 
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class ListaPokemon extends ArrayList<Pokemon> {
 
@@ -29,4 +30,15 @@ public class ListaPokemon extends ArrayList<Pokemon> {
         this.forEach((p) -> System.out.println(p.getName()));
     }
 
+    public void listaPorTipo(){
+        System.out.println("Introduce el tipo de pokemon: ");
+        Scanner sc = new Scanner(System.in);
+        String tipo = sc.nextLine();
+        this.forEach((p) ->
+        {
+            if ( p.getTipo1().equals(tipo) || p.getTipo2().equals(tipo)){
+                System.out.println(p.getName());
+            }
+        });
+    }
 }
