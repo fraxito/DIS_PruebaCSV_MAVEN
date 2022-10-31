@@ -26,9 +26,9 @@ public class PruebaCSV {
             }
             switch (seleccion) {
                 case 1:miLista.listaPorTipo();break;
-                case 2:;break;
-                case 3:;break;
-                case 4:;break;
+                case 2:miLista.listaPorNombre();break;
+                case 3:miLista.listaPorSalud();break;
+                case 4:miLista.listaPorNombreUnoSolo();break;
                 case 5:miLista.listaTodos();break;
                 default:
             }
